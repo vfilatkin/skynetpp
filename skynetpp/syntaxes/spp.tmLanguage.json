@@ -6,7 +6,7 @@
 			"include": "#keywords"
 		},
 		{
-			"include": "#strings"
+			"include": "#literals"
 		}
 	],
 	"repository": {
@@ -41,14 +41,12 @@
 			}
 		]
 		},
-		"strings": {
-			"name": "string.quoted.double.spp",
-			"begin": "\"",
-			"end": "\"",
+		"literals": {
 			"patterns": [
 				{
-					"name": "constant.character.escape.spp",
-					"match": "\\\\."
+					"name": "string.quoted.double.spp",
+					"begin": "\"",
+					"end": "(\"|$)"
 				},
 				{
 					"name": "constant.numeric.spp",
