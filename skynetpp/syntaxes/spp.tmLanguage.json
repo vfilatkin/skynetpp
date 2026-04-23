@@ -13,7 +13,7 @@
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.spp",
-				"match": "\\b(if|while|for|return|else|end|select|case|break|continue|def|func)\\b"
+				"match": "\\b(if|while|for|return|else|end|select|case|break|continue|def|func|include)\\b"
 			},
 			{
 				"name": "keyword.operator.logical.spp",
@@ -36,7 +36,7 @@
 				"match": "(?i)\\b(const|global|local|static|public)\\b"
 			},
 			{
-				"name": "entity.name.function",
+				"name": "entity.name.function.spp",
 				"match": "(?i)(?<=def\\s)\\w+\\s*(?=\\()"
 			}
 		]
@@ -51,7 +51,7 @@
 					"match": "\\\\."
 				},
 				{
-					"name": "constant.numeric.bb",
+					"name": "constant.numeric.spp",
 					"match": "\\b[0-9]+\\b"
 				}
 			]
