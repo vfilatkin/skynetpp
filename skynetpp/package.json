@@ -1,0 +1,25 @@
+{
+  "name": "skynetpp",
+  "displayName": "SkynetPP",
+  "description": "Skynet++ Scripting Language",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.116.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "spp",
+      "aliases": ["Skynet++ Scripting Language", "spp"],
+      "extensions": [".spp"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "spp",
+      "scopeName": "source.spp",
+      "path": "./syntaxes/spp.tmLanguage.json"
+    }]
+  }
+}
