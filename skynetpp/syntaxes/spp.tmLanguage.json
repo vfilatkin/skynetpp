@@ -7,6 +7,9 @@
 		},
 		{
 			"include": "#literals"
+		},
+		{
+			"include": "#comments"
 		}
 	],
 	"repository": {
@@ -33,7 +36,7 @@
 			},
 			{
 				"name": "storage.modifier.spp",
-				"match": "(?i)\\b(const|global|local|static|public)\\b"
+				"match": "(?i)\\b(const|global|local|static|public|var)\\b"
 			},
 			{
 				"name": "entity.name.function.spp",
@@ -51,6 +54,25 @@
 				{
 					"name": "constant.numeric.spp",
 					"match": "\\b[0-9]+\\b"
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.block.spp",
+					"begin": "/\\*",
+					"end": "\\*/",
+					"captures": {
+						"0": { "name": "punctuation.definition.comment.spp" }
+					}
+				},
+				{
+					"name": "comment.line.double-slash.spp",
+					"match": "(//).*$",
+					"captures": {
+						"1": { "name": "punctuation.definition.comment.spp" }
+					}
 				}
 			]
 		}
